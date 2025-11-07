@@ -1,0 +1,47 @@
+[
+{
+  "model": "remarcable_store.category",
+  "pk": 1,
+  "fields": {
+    "name": "Electronics",
+    "description": "Devices and gadgets including phones, laptops, and accessories",
+    "code": "CAT001"
+  }
+},
+{
+  "model": "remarcable_store.category",
+  "pk": 2,
+  "fields": {
+    "name": "Clothing",
+    "description": "Apparel for men, women, and kids.",
+    "code": "CAT002"
+  }
+},
+{
+  "model": "remarcable_store.category",
+  "pk": 3,
+  "fields": {
+    "name": "Home & Kitchen",
+    "description": "Household appliances and kitchenware.",
+    "code": "CAT003"
+  }
+},
+{
+  "model": "remarcable_store.category",
+  "pk": 4,
+  "fields": {
+    "name": "Sports",
+    "description": "Sporting goods.",
+    "code": "CAT004"
+  }
+},
+{
+  "model": "remarcable_store.category",
+  "pk": 5,
+  "fields": {
+    "name": "Books",
+    "description": "Reading materials.",
+    "code": "CAT005"
+  }
+}
+]

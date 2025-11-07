@@ -1,0 +1,397 @@
+[
+{
+  "model": "remarcable_store.product",
+  "pk": 1,
+  "fields": {
+    "name": "iPhone 16 Pro",
+    "short_description": "",
+    "description": "Latest Apple smartphone with latest chip.",
+    "category": 1,
+    "price": "999.99",
+    "stock_quantity": 20,
+    "sku": "ELEC001",
+    "is_active": true,
+    "created_at": "2025-11-07T12:39:52.084Z",
+    "updated_at": "2025-11-07T12:39:52.084Z",
+    "tags": []
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 2,
+  "fields": {
+    "name": "Samsung Galaxy S24",
+    "short_description": "Top notch Android phone",
+    "description": "Most selling Android phone with excellent camera.",
+    "category": 1,
+    "price": "800.00",
+    "stock_quantity": 20,
+    "sku": "ELEC002",
+    "is_active": true,
+    "created_at": "2025-11-07T12:43:39.807Z",
+    "updated_at": "2025-11-07T12:43:39.807Z",
+    "tags": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 3,
+  "fields": {
+    "name": "Dell XPS 13 Laptop",
+    "short_description": "Thin and light with all-day battery life",
+    "description": "The XPS 13 powered by Snapdragon® delivers high performance even without a the charger, with groundbreaking multi-day battery life; the longest runtime in its class, up to 27 hours with FHD+. Create in seconds with powerful, on-device AI in our thinnest and lightest XPS.",
+    "category": 1,
+    "price": "1200.00",
+    "stock_quantity": 10,
+    "sku": "ELEC003",
+    "is_active": true,
+    "created_at": "2025-11-07T12:50:08.143Z",
+    "updated_at": "2025-11-07T12:50:08.143Z",
+    "tags": [
+      10,
+      3
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 4,
+  "fields": {
+    "name": "WF-1000XM5",
+    "short_description": "Sony Noise-Cancelling Headphones",
+    "description": "The best noise cancelling with two high performance processors and dual feedback microphones (As of September 1, 2024. Ambient noise reduction according to research by Sony Corporation, measured using JEITA-compliant guidelines for the top 10 brands (by market share) of truly wireless style of noise-cancelling headphones market.)",
+    "category": 1,
+    "price": "429.99",
+    "stock_quantity": 30,
+    "sku": "ELEC004",
+    "is_active": true,
+    "created_at": "2025-11-07T12:53:26.273Z",
+    "updated_at": "2025-11-07T12:53:26.273Z",
+    "tags": [
+      2,
+      4
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 5,
+  "fields": {
+    "name": "Apple Watch Series 11",
+    "short_description": "Apple's fitness tracking watch and notifications via Bluetooth.",
+    "description": "Apple Watch Series 11 (GPS + Cellular) 42mm Rose Gold Aluminum Case with Light Blush Sport Band - Small/Medium",
+    "category": 1,
+    "price": "354.99",
+    "stock_quantity": 30,
+    "sku": "ELEC005",
+    "is_active": true,
+    "created_at": "2025-11-07T13:01:50.662Z",
+    "updated_at": "2025-11-07T13:01:50.662Z",
+    "tags": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 6,
+  "fields": {
+    "name": "H&M Men's T-shirt",
+    "short_description": "Slim Fit Pima Cotton T-shirt",
+    "description": "H&M Premium Selection Slim-fit T-shirt in soft pima cotton jersey. Crew neck with finely-ribbed trim and a straight-cut hem.",
+    "category": 2,
+    "price": "24.99",
+    "stock_quantity": 50,
+    "sku": "CLTH001",
+    "is_active": true,
+    "created_at": "2025-11-07T13:06:42.089Z",
+    "updated_at": "2025-11-07T13:06:42.089Z",
+    "tags": [
+      1,
+      7
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 7,
+  "fields": {
+    "name": "Levi's Original Trucker Jacket",
+    "short_description": "Women - classic blue denim jacket with slim fit.",
+    "description": "Original Trucker Jacket makes an outfit. You'd be hard-pressed to find a jacket with an easier shape, more versatile weight or inherent sense of cool. Bonus: The deep inside pockets are roomy enough for your essentials",
+    "category": 2,
+    "price": "118.00",
+    "stock_quantity": 40,
+    "sku": "CLTH002",
+    "is_active": true,
+    "created_at": "2025-11-07T13:10:18.095Z",
+    "updated_at": "2025-11-07T13:10:18.095Z",
+    "tags": [
+      5,
+      1,
+      8
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 8,
+  "fields": {
+    "name": "Kids’ Winter Sweater",
+    "short_description": "Keep kids cozy this winter.",
+    "description": "Soft wool-blend sweater designed for warmth and comfort, ideal for school or outdoor play.",
+    "category": 2,
+    "price": "24.99",
+    "stock_quantity": 80,
+    "sku": "CLTH003",
+    "is_active": true,
+    "created_at": "2025-11-07T13:15:08.860Z",
+    "updated_at": "2025-11-07T13:15:08.860Z",
+    "tags": [
+      3,
+      8
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 9,
+  "fields": {
+    "name": "Nike Running Shoes",
+    "short_description": "Lightweight, high-performance footwear.",
+    "description": "Breathable running shoes built for endurance and stability. Designed for both casual joggers and athletes.",
+    "category": 4,
+    "price": "89.99",
+    "stock_quantity": 45,
+    "sku": "SPRT001",
+    "is_active": true,
+    "created_at": "2025-11-07T13:16:55.930Z",
+    "updated_at": "2025-11-07T13:16:55.930Z",
+    "tags": [
+      10
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 10,
+  "fields": {
+    "name": "Yoga Mat Pro",
+    "short_description": "Comfort and grip for every pose.",
+    "description": "Eco-friendly, non-slip yoga mat that provides perfect balance of cushioning and stability for daily workouts.",
+    "category": 4,
+    "price": "39.99",
+    "stock_quantity": 70,
+    "sku": "SPRT002",
+    "is_active": true,
+    "created_at": "2025-11-07T13:18:43.912Z",
+    "updated_at": "2025-11-07T13:18:43.912Z",
+    "tags": [
+      6,
+      1
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 11,
+  "fields": {
+    "name": "Dumbbell Set (20 kg)",
+    "short_description": "Compact and durable fitness gear.",
+    "description": "Adjustable iron dumbbell set designed for effective strength training at home or in the gym.",
+    "category": 4,
+    "price": "59.99",
+    "stock_quantity": 25,
+    "sku": "SPRT003",
+    "is_active": true,
+    "created_at": "2025-11-07T13:20:40.219Z",
+    "updated_at": "2025-11-07T13:20:40.219Z",
+    "tags": [
+      2,
+      3
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 12,
+  "fields": {
+    "name": "Air Fryer XL",
+    "short_description": "Cook smarter, not greasier.",
+    "description": "Oil-free air fryer with a large basket for family meals. Features digital controls and preset cooking modes.",
+    "category": 3,
+    "price": "129.99",
+    "stock_quantity": 30,
+    "sku": "HOME001",
+    "is_active": true,
+    "created_at": "2025-11-07T13:22:53.812Z",
+    "updated_at": "2025-11-07T13:22:53.812Z",
+    "tags": [
+      10,
+      6
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 13,
+  "fields": {
+    "name": "Stainless Cookware Set",
+    "short_description": "Elevate your cooking experience.",
+    "description": "10-piece stainless-steel cookware set with non-stick coating and heat-resistant handles. Built for durability.",
+    "category": 3,
+    "price": "129.99",
+    "stock_quantity": 20,
+    "sku": "HOME002",
+    "is_active": true,
+    "created_at": "2025-11-07T13:24:18.208Z",
+    "updated_at": "2025-11-07T13:24:18.208Z",
+    "tags": [
+      9
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 14,
+  "fields": {
+    "name": "Ceramic Mug Set (6 pcs)",
+    "short_description": "Start your mornings in style.",
+    "description": "Set of 6 glossy ceramic mugs — dishwasher and microwave safe, ideal for coffee or tea lovers.",
+    "category": 3,
+    "price": "29.99",
+    "stock_quantity": 50,
+    "sku": "HOME003",
+    "is_active": true,
+    "created_at": "2025-11-07T13:25:50.445Z",
+    "updated_at": "2025-11-07T13:25:50.445Z",
+    "tags": [
+      10
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 15,
+  "fields": {
+    "name": "Memory Foam Pillow",
+    "short_description": "Sleep better every night.",
+    "description": "Ergonomic pillow with cooling gel memory foam that adapts to head and neck support for restful sleep.",
+    "category": 3,
+    "price": "49.99",
+    "stock_quantity": 35,
+    "sku": "HOME004",
+    "is_active": true,
+    "created_at": "2025-11-07T13:27:00.644Z",
+    "updated_at": "2025-11-07T13:27:00.644Z",
+    "tags": [
+      9,
+      3
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 16,
+  "fields": {
+    "name": "Fiction Novel – The Wanderer",
+    "short_description": "A journey of mystery and discovery.",
+    "description": "A thrilling mystery novel following a journalist’s quest through Europe unraveling secrets from the past.",
+    "category": 5,
+    "price": "14.99",
+    "stock_quantity": 20,
+    "sku": "BOOK001",
+    "is_active": true,
+    "created_at": "2025-11-07T13:28:19.184Z",
+    "updated_at": "2025-11-07T13:28:19.184Z",
+    "tags": [
+      2,
+      1
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 17,
+  "fields": {
+    "name": "Cookbook – Healthy Eats",
+    "short_description": "Cook clean, live green.",
+    "description": "Over 100 easy and sustainable recipes focused on nutrition, freshness, and eco-conscious cooking.",
+    "category": 3,
+    "price": "24.99",
+    "stock_quantity": 40,
+    "sku": "BOOK002",
+    "is_active": true,
+    "created_at": "2025-11-07T13:29:28.526Z",
+    "updated_at": "2025-11-07T13:29:28.526Z",
+    "tags": [
+      6,
+      3
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 18,
+  "fields": {
+    "name": "Travel Guide – Japan 2025",
+    "short_description": "Discover Japan like never before.",
+    "description": "Comprehensive travel guide featuring itineraries, cultural insights, and hidden gems for 2025 travelers.",
+    "category": 5,
+    "price": "19.99",
+    "stock_quantity": 50,
+    "sku": "BOOK003",
+    "is_active": true,
+    "created_at": "2025-11-07T13:31:02.614Z",
+    "updated_at": "2025-11-07T13:31:02.614Z",
+    "tags": [
+      5,
+      1
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 19,
+  "fields": {
+    "name": "Sirena Water Portable Vacuum Cleaner",
+    "short_description": "Compact power for quick cleaning.",
+    "description": "Cordless vacuum with long battery life : perfect for cars, small apartments, or workspaces.",
+    "category": 3,
+    "price": "69.99",
+    "stock_quantity": 22,
+    "sku": "HOME005",
+    "is_active": true,
+    "created_at": "2025-11-07T13:33:41.515Z",
+    "updated_at": "2025-11-07T13:33:41.515Z",
+    "tags": [
+      10,
+      4
+    ]
+  }
+},
+{
+  "model": "remarcable_store.product",
+  "pk": 20,
+  "fields": {
+    "name": "Hiking Backpack 40 L",
+    "short_description": "Built for adventure.",
+    "description": "Lightweight, waterproof 40L backpack with padded straps and multiple compartments for outdoor travel.",
+    "category": 4,
+    "price": "79.99",
+    "stock_quantity": 30,
+    "sku": "SPRT004",
+    "is_active": true,
+    "created_at": "2025-11-07T13:35:13.044Z",
+    "updated_at": "2025-11-07T13:35:13.045Z",
+    "tags": [
+      5,
+      1
+    ]
+  }
+}
+]
