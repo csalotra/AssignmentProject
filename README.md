@@ -96,8 +96,6 @@ This project **fulfills** following objectives:
 - Complete separation of frontend and backend.
 ---
 
----
-
 ## Setup Instructions (Step-by-Step)
 
 ### Prerequisites
@@ -142,13 +140,18 @@ npm install
 npm run dev
 
 ### Step 7: Open the App
-Go to: http://localhost:5173
+Go to: 
+Local:            http://localhost:3000   
+On Your Network:  http://172.29.240.1:3000
 You now have a fully working product store with:
 
 ->Search bar
+
 ->Category dropdown
+
 ->Tag dropdown
 
 ## Assumptions made
 -> Person can get all the products at page load.
+
 -> Pagniation applied to more than 10 records.
