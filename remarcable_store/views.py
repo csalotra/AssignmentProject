@@ -75,7 +75,7 @@ class SearchProductView(BaseListView):
         try:
             query = request.query_params.get("q", "").strip()
             category_id = request.query_params.get("category")
-            tag_id = request.query_params.get("tag")
+            tag_ids = request.query_params.getlist("tag")
 
             products = Product.objects.filter(is_deleted=False).select_related('category').prefetch_related('tags')
 
@@ -87,8 +87,13 @@ class SearchProductView(BaseListView):
             if category_id:
                 products = products.filter(category_id=category_id)
 
-            if tag_id:
-                products = products.filter(tags__id=tag_id)
+            if tag_ids:
+                try:
+                    tag_ids = [int(tid) for tid in tag_ids if tid.isdigit()]
+                    if tag_ids:
+                        products = products.filter(tags__id__in=tag_ids)
+                except ValueError:
+                    pass
 
             products = products.distinct().order_by("name")
             return self.paginated_response(products, ProductSerializer, request)

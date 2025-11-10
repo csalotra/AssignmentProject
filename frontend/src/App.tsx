@@ -24,7 +24,7 @@ const App: React.FC = () => {
 
   const [search, setSearch] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<number | "">("");
-  const [selectedTag, setSelectedTag] = useState<number | "">("");
+  const [selectedTags, setSelectedTags] = useState<number[]>([]);
 
   const [loading, setLoading] = useState(false);
   const [loadingMoreProducts, setLoadingMoreProducts] = useState(false);
@@ -33,19 +33,22 @@ const App: React.FC = () => {
     const loadInitialData = async () => {
       setLoading(true);
       try {
-        const tagRes = await fetchTags();
+        const [tagRes, catRes, prodRes] = await Promise.all([
+          fetchTags(),
+          fetchCategories(),
+          fetchProducts(),
+        ]);
+
         setTags(tagRes.results);
         setNextTags(tagRes.next);
 
-        const catRes = await fetchCategories();
         setCategories(catRes.results);
         setNextCategories(catRes.next);
 
-        const prodRes = await fetchProducts();
         setProducts(prodRes.results);
         setNextProducts(prodRes.next);
       } catch (err) {
-        console.error("Error loading data:", err);
+        console.error("Error loading initial data:", err);
       } finally {
         setLoading(false);
       }
@@ -57,26 +60,33 @@ const App: React.FC = () => {
     setLoading(true);
     try {
       const res = await fetchProducts(
-        search,
-        selectedCategory === "" ? undefined : selectedCategory,
-        selectedTag === "" ? undefined : selectedTag
+        search || undefined,
+        selectedCategory === "" ? undefined : Number(selectedCategory),
+        selectedTags.length > 0 ? selectedTags : undefined
       );
       setProducts(res.results);
       setNextProducts(res.next);
     } catch (err) {
-      console.error(err);
+      console.error("Search error:", err);
     } finally {
       setLoading(false);
     }
   };
 
   const loadMoreProducts = async () => {
-    if (!nextProducts) return;
+    if (!nextProducts || loadingMoreProducts) return;
     setLoadingMoreProducts(true);
     try {
-      const res = await fetchProducts(undefined, undefined, undefined, nextProducts);
-      setProducts((prev) => [...prev, ...res.results]);
+      const res = await fetchProducts(
+        search || undefined,
+        selectedCategory === "" ? undefined : Number(selectedCategory),
+        selectedTags.length > 0 ? selectedTags : undefined,
+        nextProducts
+      );
+      setProducts(prev => [...prev, ...res.results]);
       setNextProducts(res.next);
+    } catch (err) {
+      console.error("Load more error:", err);
     } finally {
       setLoadingMoreProducts(false);
     }
@@ -84,24 +94,16 @@ const App: React.FC = () => {
 
   const loadMoreCategories = async () => {
     if (!nextCategories) return;
-    try {
-      const res = await fetchCategories(nextCategories);
-      setCategories((prev) => [...prev, ...res.results]);
-      setNextCategories(res.next);
-    } catch (err) {
-      console.error(err);
-    }
+    const res = await fetchCategories(nextCategories);
+    setCategories(prev => [...prev, ...res.results]);
+    setNextCategories(res.next);
   };
 
   const loadMoreTags = async () => {
     if (!nextTags) return;
-    try {
-      const res = await fetchTags(nextTags);
-      setTags((prev) => [...prev, ...res.results]);
-      setNextTags(res.next);
-    } catch (err) {
-      console.error(err);
-    }
+    const res = await fetchTags(nextTags);
+    setTags(prev => [...prev, ...res.results]);
+    setNextTags(res.next);
   };
 
   return (
@@ -113,8 +115,8 @@ const App: React.FC = () => {
         tags={tags}
         selectedCategory={selectedCategory}
         setSelectedCategory={setSelectedCategory}
-        selectedTag={selectedTag}
-        setSelectedTag={setSelectedTag}
+        selectedTags={selectedTags}
+        setSelectedTags={setSelectedTags}    
         onSearch={handleSearch}
         onLoadMoreCategories={loadMoreCategories}
         onLoadMoreTags={loadMoreTags}
@@ -123,7 +125,7 @@ const App: React.FC = () => {
       />
 
       <main className="main-content">
-        {loading && <p>Loading...</p>}
+        {loading && <p className="text-center">Loading products...</p>}
 
         {!loading && products.length > 0 && (
           <>
@@ -132,9 +134,14 @@ const App: React.FC = () => {
                 <ProductCard key={p.id} product={p} />
               ))}
             </div>
+
             {nextProducts && (
-              <div style={{ textAlign: "center", marginTop: 20 }}>
-                <button onClick={loadMoreProducts} disabled={loadingMoreProducts}>
+              <div className="text-center my-8">
+                <button
+                  onClick={loadMoreProducts}
+                  disabled={loadingMoreProducts}
+                  className="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 disabled:opacity-50"
+                >
                   {loadingMoreProducts ? "Loading..." : "Load More Products"}
                 </button>
               </div>
@@ -142,21 +149,17 @@ const App: React.FC = () => {
           </>
         )}
 
-        {!loading && products.length === 0 && 
-        <div className="no-results">
-          <h2>No products found for given criteria</h2>
-          <p>Try changing your search or filters.</p>
-        </div>
-        }
+        {!loading && products.length === 0 && (
+          <div className="no-results text-center py-16">
+            <h2 className="text-2xl font-bold text-gray-700">No products found</h2>
+            <p className="text-gray-500 mt-2">Try adjusting your search or filters.</p>
+          </div>
+        )}
       </main>
-      
+
       <Footer />
     </div>
   );
 };
 
 export default App;
-
-
-
-

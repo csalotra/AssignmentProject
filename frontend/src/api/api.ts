@@ -42,14 +42,16 @@ export const fetchCategories = async (url?: string): Promise<PaginatedResponse<{
 export const fetchProducts = async (
   q?: string,
   category?: number,
-  tag?: number,
+  tags?: number[],
   pageUrl?: string
 ): Promise<PaginatedResponse<any>> => {
-  const params: any = {};
-  if (q) params.q = q;
-  if (category) params.category = category;
-  if (tag) params.tag = tag;
+  const params = new URLSearchParams();
 
-  const res = await axios.get(pageUrl || `${API_BASE}/products-search/`, { params });
+  if (q) params.append("q", q);
+  if (category) params.append("category", category.toString());
+  tags?.forEach(tag => params.append("tag", tag.toString()));
+
+  const url = pageUrl || `${API_BASE}/products-search/`;
+  const res = await axios.get(url, { params });
   return res.data;
-};
+}
