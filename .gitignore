@@ -3,7 +3,6 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.sqlite3
 
 # Virtual environment
 .venv/
@@ -23,3 +22,8 @@ venv/
 # OS
 .DS_Store
 Thumbs.db
+
+# Frontend backup ignore
+frontend/node_modules/
+frontend/build/
+frontend/dist/
