@@ -15,7 +15,7 @@ class Category(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return f"{self.name} ({self.code})" if self.code else self.name
+        return self.name
 
 
 class Tag(models.Model):
