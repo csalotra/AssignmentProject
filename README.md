@@ -71,8 +71,8 @@ ASSUMPTIONS AND NOTES
 7. TailwindCSS is loaded via CDN. -->
 
 
-# Assignment: Product Store  
-**Assignment Project** – Django + React (Full-Stack Product Search application with Search & Filter)
+# Product Store  
+**Project** – Django + React (Full-Stack Product Search application with Search & Filter)
 
 A fully functional prototype application built to complete the task of **Django models, relationships, querysets, admin interface, search/filter logic**, and **full-stack development**.
 
